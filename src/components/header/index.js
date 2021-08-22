@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Background, Container, Logo, ButtonLink } from "./styles/header";
-import { Link as ReachRouterLink } from "react-router-dom";
+import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Header({ bg = true, children, ...restProps }) {
   return bg ? <Background {...restProps}>{children}</Background> : children;
@@ -13,9 +13,9 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
-    <ReachRouterLink to={to}>
+    <ReactRouterLink to={to}>
       <Logo {...restProps} />
-    </ReachRouterLink>
+    </ReactRouterLink>
   );
 };
 
